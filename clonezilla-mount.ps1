@@ -26,7 +26,7 @@ function Main
 	$Key = 0
     
 	Clear-Host
-    Write-Host "Clonezilla Util Mount - v0.1 (2023)" -ForegroundColor Yellow
+    Write-Host "Clonezilla Util Mount - v0.1.0 (2023)" -ForegroundColor Yellow
 
     Write-Host "How do you want to mount Clonezilla image?" -ForegroundColor Cyan
     Write-Host "1 - As Folder (Requires Dokan Driver)"
@@ -39,21 +39,21 @@ function Main
         # 1 KEY
         if ($Key -eq 49) 
         {
-            Write-Host "Mount Type: As Folder"
+            Write-Host "Mount Type: As Folder" -ForegroundColor Green
             $MountType = 1
         }
 
         # 2 KEY
         if ($Key -eq 50) 
         {
-            Write-Host "Mount Type: As Img Files"
+            Write-Host "Mount Type: As Img Files" -ForegroundColor Green
             $MountType = 2
         }
 
         # 3 KEY
         if ($Key -eq 51) 
         {
-            Write-Host "Mount Type: N/A (Extracting To Img File)"
+            Write-Host "Mount Type: N/A (Extracting To Img File)" -ForegroundColor Green
             $MountType = 3
         }
 
@@ -67,12 +67,6 @@ function Main
             EXIT
         }
     }
-
-<#
-    do {
-        $MountType = Read-Host "[Enter Number]"
-    } while ($MountType -eq "" -or $MountType -lt 1 -or $MountType -gt 3)
-#>
 
     do {
         $Image = Read-Host "[Enter Clonezilla Img]"
