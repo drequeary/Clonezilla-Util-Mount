@@ -112,7 +112,7 @@ function Start-ImgMount
     # Ask user where disk image is located.
     Write-Host "Where is the disk image?" -ForegroundColor Cyan
     do {
-        $Image = Read-Host "[Enter location (without qoutes)]"
+        $Image = Read-Host "[Enter location (without quotes)]"
         Test-Reset -ReadInput $Image
     } while ($Image -eq "")
 
@@ -130,7 +130,7 @@ function Start-ImgMount
     if ($MountType -eq 3) {
         Write-Host "Where to store extracted partitions?" -ForegroundColor Cyan
         do {
-            $MountPath = Read-Host "[Enter save location (without qoutes)]"
+            $MountPath = Read-Host "[Enter save location (without quotes)]"
             Test-Reset -ReadInput $MountPath
         } while ($MountPath -eq "")
     } else {
