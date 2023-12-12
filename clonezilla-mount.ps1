@@ -49,6 +49,7 @@ function Main
     Write-Host "2 - Mount disk image as ISO files. (Requires Dokan Driver)"
     Write-Host "3 - Export disk image partitions as ISO files."
     Write-Host "4 - Clear cache folder."
+    Write-Host "ESC - Exit"
 
     $Keys = @(49, 50, 51, 52, 27, 97, 98, 99, 100)
 
